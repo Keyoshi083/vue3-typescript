@@ -4,11 +4,11 @@
 // import HelloWorld from "./components/HelloWorld.vue";
 import Payment from "./components/Payment.vue";
 import Tweet from "./components/Tweet.vue";
-import Persons from "./components/Persons.vue";
 </script>
 
 <template>
-  <Persons />
+  <!-- <Payment></Payment> -->
+  <Tweet></Tweet>
 </template>
 
 <style scoped>
