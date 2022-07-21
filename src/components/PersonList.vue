@@ -7,8 +7,10 @@ type Props = {
 defineProps<Props>();
 
 const emit = defineEmits(["delete"]);
-const deletePerson = (id: number) => {
-  emit("delete", id);
+const deletePerson = (id: number, name: string) => {
+  if (confirm(`Delete User ${name} ?`)) {
+    emit("delete", id);
+  }
 };
 </script>
 
@@ -16,7 +18,7 @@ const deletePerson = (id: number) => {
   <li v-for="person in persons" :key="person.id" class="person-list">
     <span>Name : {{ person.name }}</span>
     <span>Age : {{ person.age }}</span>
-    <button class="delete-button" @click="deletePerson(person.id)">
+    <button class="delete-button" @click="deletePerson(person.id, person.name)">
       DELETE
     </button>
   </li>
