@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Card from "./Card.vue";
-import RocketIcon from "./RocketIcon.vue";
+import Card from './Card.vue';
+import RocketIcon from './RocketIcon.vue';
 </script>
 
 <template>
@@ -13,7 +13,6 @@ import RocketIcon from "./RocketIcon.vue";
     </Card>
 
     <Card title="Icons" class="card">
-      <!-- 子コンポの<slot>タグにて表示される -->
       <div class="contents">
         <RocketIcon />
         <RocketIcon />
